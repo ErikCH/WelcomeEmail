@@ -1,0 +1,65 @@
+{
+  "auth": {
+    "welcomeemailauth9e33a2f49e33a2f4": {
+      "customAuth": false,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "welcomeemailauth9e33a2f49e33a2f4PostConfirmation",
+          "triggerProvider": "Cognito"
+        }
+      ],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "welcomeemailauth9e33a2f49e33a2f4PostConfirmation": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_welcomeemailauth9e33a2f49e33a2f4PostConfirmation_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "welcomeemailauth9e33a2f49e33a2f4PostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_welcomeemailauth9e33a2f49e33a2f4PostConfirmation_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "welcomeemailauth9e33a2f49e33a2f4PostConfirmation"
+        }
+      ]
+    }
+  }
+}
